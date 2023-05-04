@@ -1,3 +1,9 @@
+import sys
+
+sys.path.append('../aochelpers.py')
+from aochelpers import *
+
+
 def part1(input_str: list[str]) -> int:
     total = 0
     inStr = input_str[0]
@@ -14,14 +20,6 @@ def part2(input_str: list[str]) -> int:
         if inStr[index] == inStr[(index + len(inStr)//2) % len(inStr)]:
             total += int(inStr[index])
     return total
-
-
-def load_file(filename):
-    lines = []
-    with open(filename, "r") as f:
-        for line in f:
-            lines.append(line.strip())
-    return lines
 
 
 if __name__ == "__main__":
