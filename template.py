@@ -1,17 +1,20 @@
-def part1():
+def part1(input_str: list[str]) -> int:
     pass
 
 
-def part2():
+def part2(input_str: list[str]) -> int:
     pass
 
 
 def load_file(filename):
     lines = []
-    with open(filename) as f:
-        while f.
-        lines.append()
+    with open(filename, "r") as f:
+        for line in f:
+            lines.append(line)
+    return lines
+
 
 if __name__ == "__main__":
-    print("Part 1: " + part1())
-    print("Part 2: " + part2())
+    lines = load_file("input")
+    print(f"Part 1: {part1(lines)}")
+    print(f"Part 2: {part2(lines)}")
