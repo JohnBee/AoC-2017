@@ -18,6 +18,7 @@ def part1(input_str: list[str]) -> str:
     reference_program_names = set([k for p in towers.values() for k in p[1]])
     return list(all_program_names.difference(reference_program_names))[0]
 
+
 def sum_tree(start_tower, towers):
     weight = towers[start_tower][0] + sum([sum_tree(tower, towers) for tower in towers[start_tower][1]])
     return weight
@@ -28,7 +29,7 @@ def count(lst: list) -> dict:
     out = {}
     for item in lst:
         if item in out:
-            out[item] +=1
+            out[item] += 1
         else:
             out[item] = 1
     return out
