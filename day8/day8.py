@@ -1,5 +1,4 @@
 import sys
-import re
 
 sys.path.append('../aochelpers.py')
 from aochelpers import *
@@ -22,7 +21,8 @@ class Registers:
             self.highest_value = value
         self.reg[key] = value
 
-def run_program(input_str:list[str]) -> Registers:
+
+def run_program(input_str: list[str]) -> Registers:
     regs = Registers()
     operators = {">": lambda x, y: x > y,
                  ">=": lambda x, y: x >= y,
